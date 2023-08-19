@@ -98,7 +98,7 @@ public class WebSecurityConfig { // extends WebSecurityConfigurerAdapter {
                                 .requestMatchers("/api/open/translation/**").permitAll()
                                 .requestMatchers("/api/admin/login").permitAll()
                                 .requestMatchers("/api/agent/login").permitAll()
-                                .requestMatchers("/api/admin/**").hasAnyAuthority(AuthoritiesConstants.ADMIN)
+                                .requestMatchers("/api/admin/**").hasAuthority(AuthoritiesConstants.ADMIN)
                                 .requestMatchers("/api/agent/**").hasAnyAuthority(AuthoritiesConstants.AGENT)
                                 .anyRequest().authenticated()
 //          auth.requestMatchers("/login").permitAll()

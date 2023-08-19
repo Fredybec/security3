@@ -64,7 +64,6 @@ public class AuthController {
 //    headers.add("Access-Control-Expose-Headers",
 //            "Access-Control-Allow-Origin, Access-Control-Allow-Credentials, Authorization");
     headers.add(SecurityParams.JWT_HEADER_NAME,SecurityParams.HEADER_PREFIX+jwt);// Allowing frontend to access the Authorization header
-
     return ResponseEntity.ok()
             .headers(headers)
             .body(new JwtResponse(jwt,
