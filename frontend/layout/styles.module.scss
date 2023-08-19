@@ -1,0 +1,18 @@
+.authLayoutContainer {
+  display: flex;
+  height: 100vh;
+}
+
+.authLayoutLeft { 
+  width: 50%;
+  background-image: url("/auth-bg.png");
+  background-position-x: center;
+  background-size: cover;
+  position: sticky;
+  top: 0;
+}
+
+.authLayoutRight {
+  width: 50%;
+  overflow: none;
+}

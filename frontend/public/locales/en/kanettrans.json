@@ -1,0 +1,33 @@
+{
+    "new" : "New",
+    "search": "Search",
+    "export": "Export",
+    "validate": "Validate",
+    "search": "Seach...",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "next": "Next",
+
+<#list roles as role>
+    "${role.name}":
+    <#list role.menuRoles as menuRole>
+
+    <#list menuRole.menu.menuItems as menuItem>
+        "${menuItem.pojo.name}": "${menuItem.pojo.formatedName}",
+        "${menuItem.pojo.tabPanelI18nCreateKey}": "${menuItem.pojo.tabPanelI18nCreateValue}",
+        "${menuItem.pojo.listHeaderI18nKey}": "${menuItem.pojo.listHeaderI18nValue}",
+        <#list 0..menuItem.pojo.fields?size-1 as j>
+            <#if menuItem.pojo.fields[j].id == false>
+        "${menuItem.pojo.fields[j].name18nCreateKey}": "${menuItem.pojo.fields[j].name18nCreateValue}",
+            </#if>
+        </#list>
+    </#list>
+
+</#list>
+</#list>
+
+    "from-to": "Elements from {first} to {last} (total {totalRecords})"
+
+}
+
+

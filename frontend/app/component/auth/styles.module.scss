@@ -1,0 +1,16 @@
+.authForm {
+  height: 100%;
+  margin-inline: auto;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+}
+
+.authFormEmail { 
+  margin-bottom: 25px;
+}
+
+.authFormPassword {
+  margin-bottom: 25px;
+}
